@@ -1,0 +1,112 @@
+:root {
+    --primary: #0c5041;
+    --secondary: #0b4135;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--primary);
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    color: var(--white);
+    margin-bottom: 50px;
+  }
+
+  .column {
+    flex-basis: 50%;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    width: -webkit-fill-available;
+    display: block;
+  }
+
+  .content {    
+    padding: clamp(30px, calc(30px + (100 - 30) * ((100vw - 1000px) / (1600 - 1000))), 150px);
+  }
+
+  .content h1 {
+    font-size: 31px;
+    font-weight: bold;
+    color: var(--white);    
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .content h1 img {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: var(--white);
+  }
+
+  .signup-btn {
+    display: inline-block;
+    padding: 15px 150px;
+    background: var(--white);
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--secondary);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .signup-btn:hover {
+    background: var(--secondary);
+    color: var(--white);
+  }    
+
+  .feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    column-count: 3;
+  }
+
+  .feature-container > :first-child h3 {            
+    font-size: 30px;    
+  }
+
+  .feature {       
+    flex: 2; 
+    padding: 20px;
+    text-align: left;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }  
+
+  @media (max-width: 764px) {
+    .column {
+      flex-basis: 100%;
+    }
+
+    .flex-container > :last-child {
+      display: none;
+    }
+
+    .feature {
+      flex-basis: 25%;
+    }
+  }
